@@ -1,31 +1,36 @@
 [gd_scene format=3 uid="uid://b4uta6dq78i4m"]
 
 [ext_resource type="PackedScene" uid="uid://bt0k4f1ivwyv4" path="res://player.tscn" id="1_f3sb7"]
-[ext_resource type="Texture2D" uid="uid://df2xye4dlhas0" path="res://icon.svg" id="2_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://d0vp4aaujifu8" path="res://assets/tiles/stoneCaveTop.png" id="2_tlwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(1120, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
-size = Vector2(1152, 50)
+size = Vector2(280, 32)
 
 [node name="World" type="Node2D" unique_id=167490293]
 
 [node name="Player" parent="." unique_id=814151202 instance=ExtResource("1_f3sb7")]
+position = Vector2(100, 400)
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=258404620]
-position = Vector2(576, 500)
+position = Vector2(576, 550)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1849773038]
-shape = SubResource("RectangleShape2D_fj7yv")
+shape = SubResource("RectangleShape2D_tlwt5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1500943668]
-scale = Vector2(9, 0.4)
-texture = ExtResource("2_fj7yv")
+scale = Vector2(16, 1)
+texture = ExtResource("2_tlwt5")
+region_rect = Rect2(16, 1, 0, 0)
 
 [node name="Ground2" type="StaticBody2D" parent="." unique_id=1753961916]
-position = Vector2(900, 350)
+position = Vector2(950, 400)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2" unique_id=709713761]
 shape = SubResource("RectangleShape2D_fj7yv")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground2" unique_id=1137980892]
-scale = Vector2(9, 0.4)
-texture = ExtResource("2_fj7yv")
+scale = Vector2(4, 1)
+texture = ExtResource("2_tlwt5")
